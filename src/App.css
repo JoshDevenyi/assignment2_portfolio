@@ -1,38 +1,542 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Encode+Sans:wght@600&family=Hammersmith+One&family=Red+Hat+Display:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+
+/* Shared Styles */
+*, *::before, *::after{
+
+  margin:0;
+  padding: 0;
+  box-sizing: inherit;
+
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body{
+
+  font-family: 'Red Hat Display', sans-serif;
+  color: #0D4740;
+  
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
+.flexContainer{
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
-  flex-direction: column;
+  flex-flow: row wrap;
+
+}
+
+.flexContainerCol{
+
+  display: flex;
+  flex-flow: column wrap;
+  height: 100%;
+
+}
+
+section{
+  
+  padding: 30px 0;
+  width: 100%;
+
+}
+
+.sectionHeading{
+
+  font-size: 30px;
+  margin: 0 0 30px 0;
+  text-align: center;
+
+}
+
+.icon{
+
+  font-size: 60px;
+
+}
+
+.headingIcon{
+
+  position: absolute;
+  font-size: 35px;
+  transform: translate(12px, 4px);
+
+}
+
+.fullWidth{
+
+  width: 100%;
+  border: 1px solid black;
+
+}
+
+
+/* Header Styles */
+#header{
+
+  padding: 1em;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f16704;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+  
+}
+
+#siteName, #siteName a{
+
+  font-family: 'Hammersmith One', sans-serif;
+  font-size: 35px;
+  text-decoration: none;
+  color: #FFFFFF;
+
+}
+
+#siteName{
+
+  flex: 1 0 0;
+
+}
+
+#mainNavigation{
+
+  width: 100%;
+  flex: 2 0 0;
+
+}
+
+#headerMenu{
+
+  list-style: none;
+  width: 100%;
+  justify-content: flex-end;
+
+}
+
+.headerOption + .headerOption {
+
+  margin-left: 3em;
+
+}
+
+.headerLink{
+
+  text-decoration: none;
+  font-size: 24px;
+  color: #FFFFFF;
+  font-family: 'Hammersmith One', sans-serif;
+
+}
+
+.headerLink, .headerLink:visited{
+
+  color: #FFFFFF;
+
+}
+
+.headerLink:hover, .headerLink:active {
+
+  color: #0D4740;
+
+}
+
+
+/* Profile Styles */
+#profile{
+
+  justify-content: space-evenly;
+  flex-wrap: nowrap;
+
+}
+
+#textBox, #imageBox {
+
+  font-size: 1.25em;
+  font-weight: 600;
+  margin: 1em 2em;
+
+}
+
+#textBox{
+
+  max-width: 600px;
+  padding: 30px 1em;
+
+}
+
+#textHeading{
+
+  padding: 0 0 30px 0;
+  font-size: 38px;
+
+}
+
+#profileImage{
+
+  align-self: center;
+  border-radius: 25px;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+
+}
+
+#imageContainer{
+
+  max-width: 300px;
+
+}
+
+
+/* My Skills Styles */
+#skills{
+
+  background-color: #D7E3DF;
+
+}
+
+.skillsFlex{
+
+  align-items: center;
+  justify-content: space-evenly;
+  
+}
+
+#skillsColumn{
+
+  display: none;
+
+}
+
+.skill{
+
+  margin: 0 .15em;
+
+}
+
+.linebreak{
+  display: none;
+
+}
+
+
+/* My Work Styles */
+#work {
+
+  background-color: #FFFFFF;
+
+}
+
+#workExamples {
+
+  align-items: center;
+  justify-content: space-evenly;
+
+}
+
+.workExample{
+
+  margin: 0 2em;
+  padding: 2em;
+  border-top: 2px solid #D7E3DF;
+
+}
+
+.workExample:nth-child(even) .workPanelFlex{
+
+  flex-direction: row-reverse;
+
+}
+
+.workBox {
+
+  text-align: center;
+  max-width: 400px;
+  min-width: 175px;
+
+}
+
+.imageBox {
+
+  max-width: 400px;
+  min-width: 175px;
+
+}
+
+.imageFlex{
+
+  justify-content: center;
+
+}
+
+.workImage {
+
+  border-radius: 25px;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+  width: 100%;
+  height: auto;
+
+}
+
+.imageGrow {
+
+  transition: transform .4s;
+
+}
+
+.imageGrow:hover{
+
+  -ms-transform: scale(1.23, 1.23);
+  -webkit-transform: scale(1.23, 1.23);
+  transform: scale(1.23, 1.23);
+
+}
+
+.workTitle {
+
+  font-size: 24px;
+
+}
+
+.workDescription {
+
+  margin: 0 auto;
+  padding: 20px 0;
+  width: 75%;
+
+}
+
+.workSkillHeading {
+
+  font-size: 20px;
+  margin-bottom: 10px;
+  text-decoration: underline;
+  text-decoration-thickness: 3px;
+  
+}
+
+.workIcon {
+
+  font-size: 45px;
+
+}
+
+.workIcon + .workIcon {
+
+  margin-left: 10px;
+
+}
+
+.workTextFlex{
+
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+
 }
 
-.App-link {
-  color: #61dafb;
+/* My Education Styles */
+#education {
+
+  background-color: #D7E3DF;
+  text-align: center;
+
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#educationList{
+
+  margin: 0 2em;
+
 }
+
+.educationItem{
+
+  list-style: none;
+
+}
+
+.educationItem + .educationItem{
+
+  margin-top: 25px;
+
+}
+
+.degree{
+
+  margin-bottom: 10px;
+
+}
+
+
+/* Contact Me Styles */
+#contactData{
+
+  align-items: center;
+  justify-content: space-evenly;
+  
+}
+
+.contactLinkGroup{
+
+  justify-content: space-evenly;
+  width: 100%;
+  margin: 30px 0 0 0;
+
+}
+
+#email {
+
+  font-size: 22px;
+
+}
+
+.contactLink i, .contactLink i:visited{
+
+  color: #0D4740;
+
+}
+
+.contactLink i:hover, .contactLink i:active {
+
+  color: #f16704;
+  transform: scale(1.1,1.1);
+
+}
+
+
+/* Footer Styles */
+#footer div{
+
+  padding: 1em;
+  background-color: #f16704;
+  color: #FFFFFF;
+  font-weight: 500;
+  font-size: 16px;
+
+}
+
+#email{
+
+  font-weight: bold;
+
+}
+
+
+/* Media Queries */
+
+@media screen and (max-width: 960px){
+
+  /* Making Project Exampels Single Column */
+  .workPanelFlex, .workExample:nth-child(even) .workPanelFlex{
+
+    flex-direction: column;
+
+  }
+
+  .workTitle{
+
+    padding-top: 20px;
+
+  }
+
+}
+
+
+@media screen and (max-width: 768px){
+
+  /* Putting header menu on new row */
+  #header {
+    
+    flex-direction: column;
+
+  } 
+
+  #headerMenu{
+
+    justify-content: space-between;
+  
+  }
+
+  .headerOption + .headerOption {
+
+    margin-left: 0;
+  
+  }
+
+  nav{
+
+    margin-top: 1em;
+
+  }
+
+  /* Moving Profile Picture under text */
+
+  #profile {
+
+    flex-flow: column wrap;
+    
+  }
+
+  #textBox{
+
+    align-self: center;
+
+  }
+
+
+
+  /* Adds linebreak to Contact Flex */
+  .linebreak{
+  
+    display: block;
+    width: 100%;
+    height: 0;
+    margin-top: 2em;
+
+  }
+
+  .fullWidth + .fullWidth {
+    margin-top: 2em;
+  }
+
+}
+
+
+/* I'm shrinking the Skills line as the window gets narrower */
+/* I struggled finding a way to add a line break for the skill flex group*/
+/* as the method I used with my Contact section didn't work within a map function*/
+@media screen and (max-width: 720px){
+
+  .skill{
+
+    font-size: 45px;
+
+  }
+
+}
+
+/* Strinking Header Links */
+@media screen and (max-width: 450px){
+
+  .headerLink{
+
+    font-size: 20px;
+
+  }
+
+}
+
+
+@media screen and (max-width: 380px){
+  /* Making Profile Picture Strink when the screen gets around mobile size */
+  #profileImage{
+
+    width: 100%;
+    height: auto;
+  
+  }
+
+  .headerLink{
+
+    font-size: 16px;
+
+  }
+
+}
+
+
+

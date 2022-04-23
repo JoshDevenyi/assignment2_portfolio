@@ -1,0 +1,37 @@
+[
+    {
+        "id": 7,
+        "name": "HTML5",
+        "icon": "fab fa-html5"
+    },
+    {
+        "id": 8,
+        "name": "CSS3",
+        "icon": "fab fa-css3-alt"
+    },
+    {
+        "id": 9,
+        "name": "JavaScript",
+        "icon": "fab fa-js-square"
+    },
+    {
+        "id": 10,
+        "name": "PHP",
+        "icon": "fab fa-php"
+    },
+    {
+        "id": 11,
+        "name": "Node JS",
+        "icon": "fab fa-node"
+    },
+    {
+        "id": 12,
+        "name": "React",
+        "icon": "fa-brands fa-react"
+    },
+    {
+        "id": 13,
+        "name": "Laravel",
+        "icon": "fab fa-laravel"
+    }
+]

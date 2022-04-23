@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "degree": "Ontario Graduate Certificate",
+        "program": "Web Development",
+        "school": "Humber College",
+        "year_started": "2021",
+        "year_finished": "2022"
+    },
+    {
+        "id": 2,
+        "degree": "Certificate of Completion",
+        "program": "Visual Effects",
+        "school": "The Digital Animation and Visual Effects School",
+        "year_started": "2015",
+        "year_finished": "2016"
+    },
+    {
+        "id": 3,
+        "degree": "Bachelor of Fine Arts",
+        "program": "Film Production",
+        "school": "York University",
+        "year_started": "2011",
+        "year_finished": "2015"
+    }
+]
